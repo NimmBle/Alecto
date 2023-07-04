@@ -3,6 +3,17 @@ h1, h2 {
   font-size: 3.75rem;
 }
 
+a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -36,6 +47,21 @@ p, h1, h2, h3, h4, h5, h6 {
 .header {
   background-size: cover;
   background-image: url("/images/photo.png");
-  position: relative;
+  height: 1080px;
+  width: 2000px;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .nav {
+  margin-inline: 265px;
+  padding-top: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,27 @@
+@use '../abstracts';
 .header { 
     background-size: cover;
-    background-image: url('/images/photo.png');      
-    position: relative;
+    background-image: url('/images/photo.png');
+    height: 1080px; 
+    width: 2000px;     
     background-repeat: no-repeat;
+    object-fit: cover;
+    .nav {
+        margin-inline: 265px;
+        padding-top: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__links {
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .search-icon {
+                fill: variables.$white;
+            }
+            & > * {
+            }
+        }
+    }
 }
