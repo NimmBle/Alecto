@@ -1,3 +1,7 @@
 @use 'abstracts';
 @use 'base';
 @use 'layouts';
+
+body{
+    user-select: none;
+}

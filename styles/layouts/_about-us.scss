@@ -1,0 +1,60 @@
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+.about-us {
+    text-align: center;
+    &__title{
+        margin-top: 110px;
+        font-weight: typography.$fw-extraLight;
+    }
+    span {
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background-color: variables.$accent;
+        margin-top: 30px;
+    }
+    p {
+        color: #87949e;
+        margin-top: 30px;
+        font-size: typography.$fs-smaller-medium;
+        font-weight: typography.$fw-regular;
+    }
+    .elements{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        padding-inline: 346px;
+        margin-top: 70px;
+        .element
+        {
+            display: grid;
+            place-items: center;
+            .img__container {
+                display: grid;
+                place-items: center;
+                background-color: variables.$lightgrayBackground;
+                width: 182px;
+                height: 182px;
+                border-radius: 50%;
+                img {
+                    z-index: 2;
+                }
+                &:hover{
+                    background-color: variables.$accent;
+                    img {
+                        filter: brightness(2);
+                    }
+                }
+            }
+            h3 {
+                margin-top: 86px;
+                font-family: typography.$ff-primary;
+                font-size: typography.$fs-large;
+                font-weight: typography.$fw-regular;
+            }
+            span {
+                line-height: 30px;
+            }
+        }
+    }
+}

@@ -1,26 +1,77 @@
-@use '../abstracts';
-.header { 
+@import '../abstracts/typography';
+@import '../abstracts/variables';
+.header {
     background-size: cover;
-    background-image: url('/images/photo.png');
-    height: 1080px; 
-    width: 2000px;     
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/images/photo.png');
     background-repeat: no-repeat;
     object-fit: cover;
+    padding-inline: 265px;
     .nav {
-        margin-inline: 265px;
         padding-top: 57px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         &__links {
-           
             display: flex;
             justify-content: space-between;
             align-items: center;
             .search-icon {
-                fill: variables.$white;
             }
-            & > * {
+            & > *:not(:first-child) {
+                margin-left: 60px;
+            }
+        }
+    }
+    .hero {
+        border: 1px solid red;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &__main {
+            border: 1px solid lime;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            svg {
+                scale: 150%;
+            }
+            .left {
+                rotate: 180deg;
+            }
+        }
+        &__text {
+            display: grid;
+            place-items: center;
+            p {
+                line-height: 60px;
+            }
+        }
+        &__button {
+            border: 2px solid $white;
+            background-color: transparent;
+            color: $white;
+            margin-block: 50px;
+            padding: 10px 20px;
+
+        }
+        .slides {
+            &__icon { 
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid $white;
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+                &:first-child {
+                    background-color: white;
+                }
             }
         }
     }

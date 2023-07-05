@@ -4,8 +4,11 @@
 $ff-primary: 'Raleway', sans-serif;
 
 $fs-small: 0.875rem;
-$fs-headings: 3.75rem;
+$fs-smaller-medium: 1.125rem;
 $fs-medium: 1.5rem;
+$fs-large: 1.875rem;
+$fs-headings: 3.75rem;
+
 
 
 $fw-thin: 100;
@@ -28,4 +31,25 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     color: variables.$white;
+}
+
+h1 {
+    color: variables.$white;
+    font-family: $ff-primary;
+    font-weight: $fw-thin;
+    line-height: 3.75rem;
+    letter-spacing: 1.5px;
+    span {
+        font-weight: $fw-bold;
+    }
+}
+p {
+    color: variables.$white;
+    font-size: $fs-medium;
+    font-weight: $fw-light;
+    font-family: $ff-primary;
+    letter-spacing: .6px;
+}
+h2{
+    font-family: $ff-primary;
 }
