@@ -16,6 +16,7 @@
     p {
         color: #87949e;
         margin-top: 30px;
+        font-family: typography.$ff-secondary;
         font-size: typography.$fs-smaller-medium;
         font-weight: typography.$fw-regular;
     }
@@ -45,6 +46,7 @@
                         filter: brightness(2);
                     }
                 }
+                
             }
             h3 {
                 margin-top: 86px;
@@ -54,6 +56,14 @@
             }
             span {
                 line-height: 30px;
+            }
+            p{
+                width: 292px;
+                font-family: typography.$ff-secondary;
+                font-weight: typography.$fw-regular;
+                line-height: 30px;
+                letter-spacing: .45px;
+                font-size: typography.$fs-smaller-medium;
             }
         }
     }

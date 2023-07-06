@@ -1,7 +1,9 @@
 @use 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
 
 $ff-primary: 'Raleway', sans-serif;
+$ff-secondary: 'Figtree', sans-serif;
 
 $fs-small: 0.875rem;
 $fs-smaller-medium: 1.125rem;
@@ -46,7 +48,6 @@ h1 {
 p {
     font-size: $fs-medium;
     font-weight: $fw-light;
-    font-family: $ff-primary;
     letter-spacing: .6px;
 }
 h2{

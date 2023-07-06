@@ -47,9 +47,12 @@
         &__text {
             display: grid;
             place-items: center;
+            overflow: hidden;
             &__paragraph {
                 color: $white;
                 line-height: 60px;
+                font-family: $ff-secondary;
+                font-weight: $fw-light;
             }
         }
         &__button {

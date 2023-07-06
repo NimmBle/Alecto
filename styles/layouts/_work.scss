@@ -1,36 +1,47 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
 .work {
-
+    margin-bottom: 165px;
     &__elements {
         padding-top: 164px;
         &__description {
-            
+            h2 {
+                margin-bottom: 72px;
+                font-weight: typography.$fw-extraLight;
+            }
             p {
-                font-family: typography.$ff-primary;
+                font-family: typography.$ff-secondary;
                 font-weight: typography.$fw-regular;
                 color: variables.$lightgray;
                 line-height: 2.125rem;
                 font-size: typography.$fs-smaller-medium;
                 width: 717px;
+                margin-bottom: 72px;
+
             }
         }
     }
     &__elements-1 {
+        img {
+            width: 100%;
+        }
+        gap: 250px;
         padding-inline: 265px;
-        display: grid;
-        grid-template-columns: auto auto;
+        display: grid; 
+        grid-template-columns: 33% 67%;
         background-color: variables.$work-section-background
     }
     &__elements-2 {
         padding-inline: 265px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 67% 33%;
         img {
+            width: 100%;
             grid-column: 2;
             grid-row: 1;
         }
         p{
+            
             grid-column: 1;
             grid-row: 1;
         }

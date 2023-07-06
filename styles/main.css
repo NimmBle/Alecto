@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 h1, h2 {
   font-size: 3.75rem;
 }
@@ -29,7 +31,6 @@ h1 span {
 p {
   font-size: 1.5rem;
   font-weight: 300;
-  font-family: "Raleway", sans-serif;
   letter-spacing: 0.6px;
 }
 
@@ -125,7 +126,6 @@ h1 span {
 p {
   font-size: 1.5rem;
   font-weight: 300;
-  font-family: "Raleway", sans-serif;
   letter-spacing: 0.6px;
 }
 
@@ -181,10 +181,13 @@ h2 {
 .header .hero__text {
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 .header .hero__text__paragraph {
   color: #fff;
   line-height: 60px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
 }
 .header .hero__button {
   border: 2px solid #fff;
@@ -222,6 +225,7 @@ h2 {
 .about-us p {
   color: #87949e;
   margin-top: 30px;
+  font-family: "Figtree", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
 }
@@ -262,39 +266,130 @@ h2 {
 .about-us .elements .element span {
   line-height: 30px;
 }
+.about-us .elements .element p {
+  width: 292px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+  font-size: 1.125rem;
+}
 .about-us__button {
   margin-block: 108px;
 }
 
+.work {
+  margin-bottom: 165px;
+}
 .work__elements {
   padding-top: 164px;
 }
+.work__elements__description h2 {
+  margin-bottom: 72px;
+  font-weight: 200;
+}
 .work__elements__description p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-weight: 400;
   color: hsl(205, 11%, 57%);
   line-height: 2.125rem;
   font-size: 1.125rem;
   width: 717px;
+  margin-bottom: 72px;
 }
 .work__elements-1 {
+  gap: 250px;
   padding-inline: 265px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 33% 67%;
   background-color: rgba(237, 239, 241, 0.35);
+}
+.work__elements-1 img {
+  width: 100%;
 }
 .work__elements-2 {
   padding-inline: 265px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 67% 33%;
 }
 .work__elements-2 img {
+  width: 100%;
   grid-column: 2;
   grid-row: 1;
 }
 .work__elements-2 p {
   grid-column: 1;
   grid-row: 1;
+}
+
+.quotes {
+  padding-top: 188px;
+  background-image: url("../../images/photo_2.png");
+  background-repeat: no-repeat;
+  background-color: #e8e8e5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 263px;
+}
+.quotes .quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quotes ul {
+  list-style: none;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+.quotes ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.quotes ul li img {
+  margin-bottom: 45px;
+}
+.quotes ul li q {
+  font-size: 1.875rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.75px;
+  margin-bottom: 38px;
+  color: #fff;
+}
+.quotes ul li q span {
+  color: #17daa3;
+}
+.quotes ul li p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.45px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 123px;
+}
+.quotes ul li p span {
+  font-weight: 500;
+}
+.quotes .slides__icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 147px;
+}
+.quotes .slides__icon:not(:first-child) {
+  margin-left: 10px;
+}
+.quotes .slides__icon:first-child {
+  background-color: white;
 }
 
 .button {
