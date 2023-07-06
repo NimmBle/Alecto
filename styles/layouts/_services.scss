@@ -1,0 +1,48 @@
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+.services {
+    background-color: variables.$section-background;
+    &__heading {
+        text-align: center;
+        h2 {
+            padding-top: 110px;
+            color: variables.$darkgray;
+            font-weight: typography.$fw-extraLight;
+        }
+        span {
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: variables.$accent;
+            margin-top: 30px;
+        }
+        p{
+            margin-block: 56px 166px;
+            font-size: typography.$fs-smaller-medium;
+            font-family: typography.$ff-secondary;
+            font-weight: typography.$fw-regular
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .item {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            margin-right: 20px;
+            div {
+                background-color: variables.$white;
+                width: 94px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+            }
+            p {
+                grid-column: 2;
+            }
+        }
+    }
+}

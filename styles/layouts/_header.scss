@@ -24,7 +24,6 @@
         }
     }
     .hero {
-        border: 1px solid red;
         display: grid;
         place-items: center;
         text-align: center;
@@ -33,7 +32,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         &__main {
-            border: 1px solid lime;
             display: flex;
             align-items: center;
             justify-content: space-between;

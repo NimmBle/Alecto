@@ -17,7 +17,6 @@
                 font-size: typography.$fs-smaller-medium;
                 width: 717px;
                 margin-bottom: 72px;
-
             }
         }
     }
@@ -29,7 +28,7 @@
         padding-inline: 265px;
         display: grid; 
         grid-template-columns: 33% 67%;
-        background-color: variables.$work-section-background
+        background-color: variables.$section-background
     }
     &__elements-2 {
         padding-inline: 265px;

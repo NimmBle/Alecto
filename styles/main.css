@@ -157,7 +157,6 @@ h2 {
   margin-left: 60px;
 }
 .header .hero {
-  border: 1px solid red;
   display: grid;
   place-items: center;
   text-align: center;
@@ -167,7 +166,6 @@ h2 {
   transform: translate(-50%, -50%);
 }
 .header .hero__main {
-  border: 1px solid lime;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -390,6 +388,52 @@ h2 {
 }
 .quotes .slides__icon:first-child {
   background-color: white;
+}
+
+.services {
+  background-color: rgba(237, 239, 241, 0.35);
+}
+.services__heading {
+  text-align: center;
+}
+.services__heading h2 {
+  padding-top: 110px;
+  color: #576671;
+  font-weight: 200;
+}
+.services__heading span {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: #17daa3;
+  margin-top: 30px;
+}
+.services__heading p {
+  margin-block: 56px 166px;
+  font-size: 1.125rem;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+}
+.services__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.services__items .item {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-right: 20px;
+}
+.services__items .item div {
+  background-color: #fff;
+  width: 94px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.services__items .item p {
+  grid-column: 2;
 }
 
 .button {
