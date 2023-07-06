@@ -47,16 +47,15 @@
         &__text {
             display: grid;
             place-items: center;
-            p {
+            &__paragraph {
+                color: $white;
                 line-height: 60px;
             }
         }
         &__button {
             border: 2px solid $white;
             background-color: transparent;
-            color: $white;
             margin-block: 50px;
-            padding: 10px 20px;
 
         }
         .slides {
@@ -70,7 +69,7 @@
                     margin-left: 10px;
                 }
                 &:first-child {
-                   // background-color: white;
+                    background-color: white;
                 }
             }
         }
