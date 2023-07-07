@@ -1,0 +1,21 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+
+.banner {
+    display: grid;
+    place-items: center;
+    margin-top: 111px;
+    padding-block: 280px;
+    background-image: url('../../images/try-our-template.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__title{
+        margin-bottom: 100px;
+        @include mixins.section-title;
+        color: variables.$white;
+        span {
+            font-weight: typography.$fw-bold;
+        }
+    }
+}

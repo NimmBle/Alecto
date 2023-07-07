@@ -1,37 +1,40 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
+@use '../abstracts/mixins';
 .services {
     background-color: variables.$section-background;
     &__heading {
         text-align: center;
         h2 {
             padding-top: 110px;
-            color: variables.$darkgray;
-            font-weight: typography.$fw-extraLight;
+            @include mixins.section-title;
         }
         span {
-            display: inline-block;
-            width: 30px;
-            height: 1px;
-            background-color: variables.$accent;
-            margin-top: 30px;
+            @include mixins.span-greenLine;
         }
         p{
             margin-block: 56px 166px;
-            font-size: typography.$fs-smaller-medium;
-            font-family: typography.$ff-secondary;
-            font-weight: typography.$fw-regular
+            @include mixins.section-title-paragraph;
         }
     }
     &__items{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        padding: 0 265px 156px 265px;
 
         .item {
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 1fr 4fr;
+            align-items: center;
             margin-right: 20px;
+            h3 {       
+                color: variables.$darkgray;
+                font-family: typography.$ff-primary;
+                font-size: typography.$fs-headings;  
+                font-weight: typography.$fw-extraLight;
+                
+            }
             div {
                 background-color: variables.$white;
                 width: 94px;
@@ -41,6 +44,11 @@
                 place-items: center;
             }
             p {
+                @include mixins.section-title-paragraph;
+                color: variables.$lightgray;
+                margin-block: 32 px 93px;
+                letter-spacing: 0.45px;
+                line-height: 3rem;
                 grid-column: 2;
             }
         }

@@ -1,24 +1,19 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
+@use '../abstracts/mixins';
 .about-us {
     text-align: center;
     &__title{
-        margin-top: 110px;
-        font-weight: typography.$fw-extraLight;
+        @include mixins.section-title;
+        padding-top: 110px;
     }
     span {
-        display: inline-block;
-        width: 30px;
-        height: 1px;
-        background-color: variables.$accent;
-        margin-top: 30px;
+        @include mixins.span-greenLine;
     }
     p {
-        color: #87949e;
+        @include mixins.section-title-paragraph;
         margin-top: 30px;
-        font-family: typography.$ff-secondary;
-        font-size: typography.$fs-smaller-medium;
-        font-weight: typography.$fw-regular;
+        
     }
     .elements{
         display: grid;

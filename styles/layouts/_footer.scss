@@ -1,0 +1,29 @@
+@use '../abstracts/variables';
+.footer {
+
+    background-image: url('../../images/vector-smart-object-copy.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 576px;
+    padding: 72px 265px 180px 265px;
+    &__div {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__leftSide {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        .copyright{
+            color: variables.$lightgray;
+        }
+    }
+    .links {
+        display: flex;
+        gap: 20px;
+        a {
+            color: rgba(135, 148, 158, 0.45);
+        }
+    }
+    
+}

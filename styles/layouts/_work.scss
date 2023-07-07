@@ -1,13 +1,14 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
+@use '../abstracts/mixins';
 .work {
     margin-bottom: 165px;
     &__elements {
         padding-top: 164px;
         &__description {
             h2 {
+                @include mixins.section-title;
                 margin-bottom: 72px;
-                font-weight: typography.$fw-extraLight;
             }
             p {
                 font-family: typography.$ff-secondary;

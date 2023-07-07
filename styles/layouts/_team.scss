@@ -1,0 +1,57 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+.bg--white{
+  background-color: #f9f9fa;
+}
+.bg--grey {
+ background-color: #e4e4e5;
+}
+.bg--lightGrey {
+ background-color: #eff0f0;
+}
+
+
+.team {
+    &__heading {
+        text-align: center;
+        h2 {
+            padding-top: 110px;
+            @include mixins.section-title;
+        }
+        span {
+            @include mixins.span-greenLine;
+        }
+        p{
+            margin-block: 56px 166px;
+            @include mixins.section-title-paragraph;
+        }
+    }
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .person {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            img{
+                padding-top: 57px;
+            }
+            .image__overlay {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: variables.$accent;
+                opacity: 0;
+                transition: .5s ease;
+            }
+            &:hover::before {
+                opacity: 0.23;
+            }
+            }
+        }
+    }
+}

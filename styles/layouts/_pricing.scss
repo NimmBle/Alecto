@@ -1,0 +1,74 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+
+.pricing {
+    background-color: variables.$section-background;
+    padding-inline: 265px;
+    &__heading {
+        text-align: center;
+        h2 {
+            padding-top: 110px;
+            @include mixins.section-title;
+        }
+        span {
+            @include mixins.span-greenLine;
+        }
+        p{
+            margin-block: 56px 166px;
+            @include mixins.section-title-paragraph;
+        }
+    }
+    &__options{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        &-option {
+            background-color: variables.$white;
+            padding-top: 54px;  
+            border-radius: 5px;
+            box-shadow: 0 0 35px 0 rgba(227, 227, 227, 0.65);
+            div {
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+                padding-bottom: 57px;
+                margin-bottom: 67px;
+            }
+            h3{
+                @include mixins.section-title;
+                margin: 0 0 27px 34px;
+                font-family: typography.$ff-primary;
+                color: variables.$accent
+            }
+            span {
+                @include mixins.section-title-paragraph;
+                color: rgba(135, 148, 158, 0.45);
+                margin: 0 0 57px 34px;
+            }
+            .option__description{
+                margin: 0 0 75px 34px;
+                @include mixins.section-title-paragraph;
+                line-height: 3rem;
+
+            }
+            .button__purchase {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background-color: variables.$accent;
+                padding: 30px 35px;
+                border: none;
+                .purchase {
+                    @include mixins.section-title-paragraph;
+                    font-weight: typography.$fw-bold;
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    color: variables.$white;
+                }
+            }
+            
+
+        }
+    }
+}

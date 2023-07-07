@@ -1,0 +1,22 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+
+.locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 126px;
+    padding-left: 265px;
+    gap: 56px;
+    .description {
+        &__title {
+            @include mixins.section-title;
+            margin-bottom: 84px;
+        }
+        &__paragraph { 
+            @include mixins.section-title-paragraph;
+            margin-bottom: 74px;
+            line-height: 2.25rem;
+        }
+    }
+}

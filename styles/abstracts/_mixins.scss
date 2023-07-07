@@ -1,0 +1,21 @@
+@use 'variables';
+@use 'typography';
+
+@mixin section-title {
+    font-size: typography.$fs-headings; 
+    color: variables.$darkgray;
+    font-weight: typography.$fw-extraLight;
+  }
+@mixin span-greenLine {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: variables.$accent;
+    margin-top: 30px;
+}
+@mixin section-title-paragraph {
+    color: variables.$lightgray;
+    font-family: typography.$ff-secondary;
+    font-size: typography.$fs-smaller-medium;
+    font-weight: typography.$fw-regular
+}
