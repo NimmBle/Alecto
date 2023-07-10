@@ -11,4 +11,8 @@
     border: none;
     font-size: typography.$fs-small;
     font-weight: typography.$fw-bold;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: variables.$accentDarker;
+    }
 }
