@@ -1,0 +1,46 @@
+@use '../abstracts/media-query';
+
+.slider-wrapper {
+    // position: relative;
+    overflow: hidden;
+
+    #arrow-prev-header {
+        rotate: 180deg;
+        left: -220px;
+        top: 10%;
+    }
+    #arrow-next-header {
+        right: -220px;
+        top: 10%;
+    }
+    .slide-arrow {
+        position: absolute;
+        scale: 200%;
+    }
+    .slides-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .slide-header {
+            width: 100%;
+            height: 100%;
+            flex: 1 0 100%;
+        }
+    }
+    @include media-query.responsive(phone) {
+        .slide-arrow {
+            display: none;
+            position: absolute;
+            scale: 200%;
+        }
+    }
+}

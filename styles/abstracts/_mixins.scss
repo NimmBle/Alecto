@@ -1,11 +1,15 @@
 @use 'variables';
 @use 'typography';
+@use 'media-query';
 
 @mixin section-title {
     font-size: typography.$fs-headings; 
     color: variables.$darkgray;
     font-weight: typography.$fw-extraLight;
-  }
+    @include media-query.responsive(phone) {
+        font-size: typography.$fs-headings - 1rem;
+    }
+}
 @mixin span-greenLine {
     display: inline-block;
     width: 30px;
@@ -17,5 +21,8 @@
     color: variables.$lightgray;
     font-family: typography.$ff-secondary;
     font-size: typography.$fs-smaller-medium;
-    font-weight: typography.$fw-regular
+    font-weight: typography.$fw-regular;
+    @include media-query.responsive(phone) {
+        font-size: typography.$fs-smaller-medium - 0.2rem;
+    }
 }

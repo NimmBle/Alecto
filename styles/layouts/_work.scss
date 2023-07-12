@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
 @use '../abstracts/mixins';
+@use '../abstracts/media-query';
 .work {
     margin-bottom: 165px;
     &__elements {
@@ -28,13 +29,13 @@
         gap: 250px;
         padding-inline: 265px;
         display: grid; 
-        grid-template-columns: 33% 67%;
+        grid-template-columns: 1fr 2fr;
         background-color: variables.$section-background
     }
     &__elements-2 {
         padding-inline: 265px;
         display: grid;
-        grid-template-columns: 67% 33%;
+        grid-template-columns: 2fr 1fr;
         img {
             width: 100%;
             grid-column: 2;
@@ -44,6 +45,28 @@
             
             grid-column: 1;
             grid-row: 1;
+        }
+    }
+    @include media-query.responsive(phone) {
+        &__elements {
+            padding-inline: 10px;
+            grid-template-columns: 100%;
+            text-align: center;
+            &__description {
+                p {
+                    width: auto;
+                }
+            }
+        }
+        &__elements-1 {
+            gap: 50px;
+        }
+        &__elements-2 {
+            gap: 50px;
+            img {
+                grid-column: 1;
+                grid-row: 1;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 @use '../abstracts/typography';
+@use '../abstracts/media-query';
 
 .pricing {
     background-color: variables.$section-background;
@@ -55,8 +56,8 @@
             .button__purchase {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-
+                justify-content: space-between; 
+                cursor: pointer;
                 background-color: variables.$accent;
                 padding: 30px 35px;
                 border: none;
@@ -74,6 +75,12 @@
             }
             
 
+        }
+    }
+    @include media-query.responsive(phone) {
+        padding-inline: 20px;
+        &__options{
+            grid-template-columns: 100%;
         }
     }
 }

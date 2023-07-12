@@ -1,5 +1,6 @@
 @use '../abstracts/typography';
 @use '../abstracts/variables';
+@use '../abstracts/media-query';
 
 .quotes {
     padding-top: 188px;
@@ -85,6 +86,9 @@
                 background-color: white;
             }
         }
+    }
+    @include media-query.responsive(phone) {
+        padding-inline: 20px;
     }   
 }
     

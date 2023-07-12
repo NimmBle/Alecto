@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
 @use '../abstracts/mixins';
+@use '../abstracts/media-query';
 .services {
     background-color: variables.$section-background;
     &__heading {
@@ -46,10 +47,43 @@
             p {
                 @include mixins.section-title-paragraph;
                 color: variables.$lightgray;
-                margin-block: 32 px 93px;
+                margin-block: 32px 93px;
                 letter-spacing: 0.45px;
                 line-height: 3rem;
                 grid-column: 2;
+            }
+        }
+    }
+    @include media-query.responsive(phone) {
+        &__heading {
+            p {
+                margin-block: 56px 100px; 
+            }
+        }
+        &__items{
+            grid-template-columns: 100%;
+            gap: 0;
+            padding: 0 20px 60px 20px;
+            .item {
+                grid-template-columns: 100%;
+                place-items: center;
+                text-align: center;
+                margin-right: 0px;
+                h3 {       
+                    font-size: typography.$fs-headings - 1rem;  
+                    
+                }
+                div {
+                    width: 70px;
+                    margin-bottom: 10px;
+                    img {
+                        scale: 80%
+                    }
+                }
+                p {
+                    line-height: 1.5rem;
+                    grid-column: 1;
+                }
             }
         }
     }

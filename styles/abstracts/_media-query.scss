@@ -1,5 +1,40 @@
-@media (min-width: 1920px) {
-    .header {
-        background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('../../images/photo@2x.png');
+$pc-big: 2000px; // Big PC screen size
+$pc: 1600px; // Normal PC screen size
+$pc-small: 1200px; // Small PC screen size
+$tablet-landscape: 1024px; // Tablet Landscape screen size
+$tablet: 760px; // Tablet screen size
+$phone: 375px;  // Phone screen size.
+
+
+@mixin responsive($media) {
+  @if $media == phone {
+    @media only screen and (min-width: 0) and (max-width: $tablet) {
+      @content;
     }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: ($tablet - 1)){
+      @content;
+    }
+  }
+  @else if $media == tablet-landscape {
+    @media only screen and (min-width: ($tablet-landscape - 1)){
+      @content;
+    }
+  }
+  @else if $media == pc-small {
+    @media only screen and (min-width: ($pc-small + 1)){
+      @content;
+    }
+  }
+  @else if $media == pc {
+    @media only screen and (min-width: ($pc + 1)) {
+      @content;
+    }
+  }
+  @else if $media == pc-big {
+    @media only screen and (min-width: ($pc-big - 1)) {
+      @content;
+    }
+  }
 }

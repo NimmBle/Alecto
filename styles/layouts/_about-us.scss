@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/media-query';
 @use '../abstracts/typography';
 @use '../abstracts/mixins';
 .about-us {
@@ -49,6 +50,7 @@
                 margin-top: 86px;
                 font-family: typography.$ff-primary;
                 font-size: typography.$fs-large;
+                
                 font-weight: typography.$fw-regular;
             }
             span {
@@ -66,5 +68,21 @@
     }
     &__button {
         margin-block: 108px;
+    }
+    @include media-query.responsive(phone) {
+        padding-inline: 30px;
+        .elements {
+            gap: 87px;
+            padding-inline: 0px;
+            grid-template-columns: 100%;
+            .element {
+                h3 {
+                        margin-top: 40px;
+                }
+            }
+        }
+        &__button {
+            margin-block: 50px;
+        }
     }
 }

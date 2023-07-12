@@ -1,0 +1,38 @@
+@use '../abstracts/media-query';
+@mixin hamburger() {
+
+    .hammburger__button {
+        border: none;
+        padding: 0px;
+        background-color: transparent;
+        @include media-query.responsive(tablet-landscape) {
+          display: none;
+        }
+      }
+      .hammburger__button .hamburger {
+        padding: 0px;
+        scale: 100%;
+      }
+      .hammburger__button .hamburger .line {
+        scale: 100%;
+        will-change: transform;
+        fill: rgb(255, 255, 255);
+        transform-origin: center;
+        transition: rotate 200ms ease-in, y 200ms ease-in 200ms, opacity 0ms 200ms;
+      }
+      .hammburger__button .hamburger.active .line {
+        transition: rotate 200ms ease-in 200ms, y 200ms ease-in, opacity 0ms 200ms;
+      }
+      .hammburger__button .hamburger.active .top {
+        y: 45%;
+        rotate: 45deg;
+      }
+      .hammburger__button .hamburger.active .mid {
+        opacity: 0;
+      }
+      .hammburger__button .hamburger.active .bot {
+        y: 45%;
+        rotate: -45deg;
+      }
+      
+}
