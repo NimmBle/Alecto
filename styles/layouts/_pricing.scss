@@ -83,4 +83,11 @@
             grid-template-columns: 100%;
         }
     }
+    @include media-query.responsive(tablet) {
+        padding-inline: 20px;
+        &__options{
+            gap: 20px 20px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }

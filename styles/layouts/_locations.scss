@@ -31,4 +31,15 @@
             
         }
     }
+    @include media-query.responsive(tablet) {
+        text-align: center;
+        grid-template-columns: 100%; 
+        padding-inline: 20px;
+        .image {
+            img {
+                display: none;
+            }
+            
+        }
+    }
 }

@@ -103,4 +103,12 @@
             grid-template-columns: 100%; 
         }
     }
+    @include media-query.responsive(tablet) {
+        &__heading {
+            padding-inline: 20px;
+        }
+        &__images {
+            grid-template-columns: 100%; 
+        }
+    }
 }

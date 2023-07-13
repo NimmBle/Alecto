@@ -43,4 +43,11 @@
             scale: 200%;
         }
     }
+    @include media-query.responsive(tablet) {
+        .slide-arrow {
+            display: none;
+            position: absolute;
+            scale: 200%;
+        }
+    }
 }
