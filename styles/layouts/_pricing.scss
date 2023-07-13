@@ -81,6 +81,15 @@
         padding-inline: 20px;
         &__options{
             grid-template-columns: 100%;
+            &-option {
+                .label {
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                .option__description{
+                    margin-bottom: 30px;
+                }
+            }
         }
     }
     @include media-query.responsive(tablet) {

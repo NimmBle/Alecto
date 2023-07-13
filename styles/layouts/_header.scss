@@ -86,4 +86,10 @@
             padding-top: 30px;
         }
     }
+    @include media-query.responsive(tablet-landscape) {
+        padding-inline: 1rem;
+        .nav {
+            padding-top: 30px;
+        }
+    }
 }

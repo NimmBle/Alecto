@@ -42,4 +42,18 @@
             
         }
     }
+    @include media-query.responsive(tablet-landscape) {
+        text-align: start;
+        grid-template-columns: 1fr 1fr; 
+        padding-inline: 20px;
+        .image {
+            display: grid;
+            place-items: center;
+            img {
+                display: block;
+                width: 100%;
+            }
+            
+        }
+    }
 }

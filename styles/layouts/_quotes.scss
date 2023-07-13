@@ -10,33 +10,9 @@
     place-items: center;
     text-align: center;
     padding-inline: 263px;
-    .slider-wrapper {
+    .slider-wrapper-quotes{
         position: relative;
-        overflow: hidden;
-        #arrow-prev-quotes {
-            rotate: 180deg;
-            left: 0;
-            top: 50%;
-        }
-        #arrow-next-quotes {
-            right: 0;
-            top: 50%;
-        }
-        .slide-arrow {
-            position: absolute;
-        }
         .slides-container {
-            width: 100%;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            overflow: scroll;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-            &::-webkit-scrollbar{
-                width: 0;
-                height: 0;
-            }
             .slide-quotes{
                 display: grid;
                 place-items: center;
@@ -89,7 +65,10 @@
     }
     @include media-query.responsive(phone) {
         padding-inline: 20px;
-    }   
+    }  
+    @include media-query.responsive(tablet) {
+        padding-inline: 20px;
+    }    
 }
     
 

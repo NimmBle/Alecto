@@ -28,11 +28,36 @@
     }
     @include media-query.responsive(phone) {
         padding: 0;
+        &__div {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
         .links {
+            margin-top: 20px;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         &__leftSide {
-            display: block;
+            justify-content: space-around;
+            margin-top: 30px
+        }
+    }
+    @include media-query.responsive(tablet) {
+        padding: 0;
+        &__div {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .links {
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__leftSide {
+            justify-content: space-around;
+            margin-top: 30px
         }
     }
 }
