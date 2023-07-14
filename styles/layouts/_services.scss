@@ -101,10 +101,12 @@
         }
         &__items{
             grid-template-columns: 1fr 1fr;
-            gap: 0;
-            padding: 0 20px 60px 20px;
+            gap: 60px;
+            padding: 0 40px 60px 40px;
             .item {
-                grid-template-columns: 1fr 4fr;
+                grid-template-columns: 100%;
+                place-items: center;
+                text-align: center;
                 margin-right: 0px;
                 column-gap: 10px;
                 h3 {       
@@ -116,7 +118,9 @@
                 }
                 p {
                     line-height: 1.5rem;
-                    grid-column: 2;
+                    margin-bottom: 40px;
+                    padding-inline: 30px;
+                    grid-column: 1;
                 }
             }
         }
@@ -129,10 +133,10 @@
         }
         &__items{
             grid-template-columns: 1fr 1fr;
-            gap: 0;
-            padding: 0 20px 60px 20px;
+            gap: 40px;
+            padding: 0 60px 60px 60px;
             .item {
-                grid-template-columns: 1fr 4fr;
+                grid-template-columns: 100%;
                 margin-right: 0px;
                 column-gap: 10px;
                 h3 {       
@@ -144,7 +148,100 @@
                 }
                 p {
                     line-height: 1.5rem;
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+    @include media-query.responsive(pc-small) {
+        &__heading {
+            p {
+                margin-block: 56px 100px; 
+            }
+        }
+        &__items{
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 0 60px 60px 60px;
+            .item {
+                grid-template-columns: 1fr 4fr;
+                margin-right: 0px;
+                column-gap: 10px;
+                place-items: start;
+                text-align: start;
+                h3 {       
+                    font-size: typography.$fs-headings - 1rem;                     
+                }
+                div {
+                    width: 70px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: 1.5rem;
                     grid-column: 2;
+                    padding-inline: 0px;
+                }
+            }
+        }
+    }
+    @include media-query.responsive(pc) {
+        &__heading {
+            p {
+                margin-block: 56px 100px; 
+            }
+        }
+        &__items{
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 0 100px 60px 100px;
+            .item {
+                grid-template-columns: 1fr 4fr;
+                margin-right: 0px;
+                column-gap: 10px;
+                place-items: start;
+                text-align: start;
+                h3 {       
+                    font-size: typography.$fs-headings - 1rem;                     
+                }
+                div {
+                    width: 70px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: 1.5rem;
+                    grid-column: 2;
+                    padding-inline: 0px;
+                }
+            }
+        }
+    }
+    @include media-query.responsive(pc-big) {
+        &__heading {
+            p {
+                margin-block: 56px 100px; 
+            }
+        }
+        &__items{
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 0 100px 60px 100px;
+            .item {
+                grid-template-columns: 1fr 4fr;
+                margin-right: 0px;
+                column-gap: 10px;
+                place-items: start;
+                text-align: start;
+                h3 {       
+                    font-size: typography.$fs-headings - 1rem;                     
+                }
+                div {
+                    width: 70px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: 1.5rem;
+                    grid-column: 2;
+                    width: 40ch;
                 }
             }
         }

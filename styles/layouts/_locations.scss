@@ -45,7 +45,7 @@
     @include media-query.responsive(tablet-landscape) {
         text-align: start;
         grid-template-columns: 1fr 1fr; 
-        padding-inline: 20px;
+        padding-inline: 50px 0px;
         .image {
             display: grid;
             place-items: center;

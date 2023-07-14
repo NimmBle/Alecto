@@ -71,4 +71,28 @@
             top: 43%;
         }
     }
+    @include media-query.responsive(pc-small) {
+        .slide-arrow {
+            display: inline;
+            position: absolute;
+            scale: 200%;
+        }
+        .arrow-prev {
+            rotate: 180deg;
+            left: -210px;
+            top: 15%;
+        }
+        .arrow-next {
+            right: -210px;
+            top: 15%;
+        }
+        #arrow-next-quotes {
+            right: 20px;
+            top: 43%;
+        }
+        #arrow-prev-quotes {
+            left: 20px;
+            top: 43%;
+        }
+    }
 }

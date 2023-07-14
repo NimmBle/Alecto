@@ -75,6 +75,7 @@
         &__elements {
             padding-inline: 10px;
             grid-template-columns: 100%;
+            padding-top: 60px;
             text-align: center;
             place-items: center;
             img {
@@ -128,4 +129,95 @@
             }
         }
     }
+    @include media-query.responsive(pc-small) {
+        &__elements {
+            padding-inline: 100px;
+            padding-top: 50px;
+            grid-template-columns: 1fr 1fr;
+            text-align: start;
+            place-items: center;
+            img {
+                width: 70%;
+            }
+            &__description {
+                p {
+                    padding-inline: 0px;
+                    width: auto;
+                }
+            }
+        }
+        &__elements-1 {
+            gap: 50px;
+            padding-bottom: 50px;
+            text-align: end;
+        }
+        &__elements-2 {
+            gap: 50px;
+            img {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+    }
+    @include media-query.responsive(pc) {
+        &__elements {
+            padding-inline: 100px;
+            padding-top: 50px;
+            grid-template-columns: 1fr 1fr;
+            text-align: start;
+            place-items: center;
+            img {
+                width: 80%;
+            }
+            &__description {
+                p {
+                    padding-inline: 0px;
+                    width: auto;
+                }
+            }
+        }
+        &__elements-1 {
+            gap: 50px;
+            padding-bottom: 50px;
+            text-align: end;
+        }
+        &__elements-2 {
+            gap: 50px;
+            img {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+    }
+    @include media-query.responsive(pc-big) {
+        &__elements {
+            padding-inline: 100px;
+            padding-top: 50px;
+            grid-template-columns: 1fr 1fr;
+            text-align: start;
+            place-items: center;
+            img {
+                width: 60%;
+            }
+            &__description {
+                p {
+                    padding-inline: 0px;
+                    width: auto;
+                }
+            }
+        }
+        &__elements-1 {
+            gap: 50px;
+            padding-bottom: 50px;
+            text-align: end;
+        }
+        &__elements-2 {
+            gap: 50px;
+            img {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+    }
+    
 }

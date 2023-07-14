@@ -93,10 +93,21 @@
         }
     }
     @include media-query.responsive(tablet) {
-        padding-inline: 20px;
+        padding-inline: 60px;
         &__options{
-            gap: 20px 20px;
+            gap: 40px;
             grid-template-columns: 1fr 1fr;
+        }
+    }
+    @include media-query.responsive(pc-small) {
+        &__options{
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            &-option {
+                .option__description{
+                    margin-inline: 30px;
+                }
+            }
         }
     }
 }
