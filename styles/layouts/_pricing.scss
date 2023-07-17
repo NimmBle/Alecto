@@ -113,7 +113,6 @@
     @include media-query.responsive(pc-big) {
         padding-inline: 256px;
         &__options{
-            gap: 30px;
             &-option {
                 .option__description{
                     width: auto;

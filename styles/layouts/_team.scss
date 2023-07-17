@@ -120,9 +120,6 @@
         }
     }
     @include media-query.responsive(pc-small) {
-        &__heading {
-            padding-inline: 20px;
-        }
         &__images {
             .mobile__carousel {
                 grid-template-columns: repeat(5, 20%);
