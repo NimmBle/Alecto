@@ -56,4 +56,8 @@
             
         }
     }
+    @include media-query.responsive(pc-big) {
+        align-items: center;
+        padding-inline: 265px 0px;
+    }
 }

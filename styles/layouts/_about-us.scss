@@ -141,4 +141,14 @@
             margin-block: 100px 50px;
         }
     }
+    @include media-query.responsive(pc-big) {
+        padding-inline: 256px;
+        .elements {
+            gap: 88px 20px;
+            margin-top: 156px;
+        }
+        &__button {
+            margin-block: 110px;
+        } 
+    }
 }

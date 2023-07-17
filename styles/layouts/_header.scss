@@ -73,6 +73,9 @@
         padding-inline: 1rem;
         .nav { 
             padding-top: 30px;
+            .hidden {
+                display: none;
+            }
             &__links {
                 background-color: rgba(0, 0, 0, 0.274);
                 backdrop-filter: blur(4px);
@@ -97,6 +100,9 @@
         padding-inline: 1rem;
         .nav {
             padding-top: 30px;
+            .hidden {
+                display: none;
+            }
             &__links {
                 background-color: rgba(0, 0, 0, 0.274);
                 backdrop-filter: blur(4px);
@@ -104,7 +110,7 @@
                 flex-direction: column;
                 position: absolute;
                 left: 50%;
-                top: 50px;
+                top: 90px;
                 transform: translateX(-50%);
                 & > *:not(:first-child) {
                     margin-left: 0px;
@@ -116,21 +122,29 @@
     @include media-query.responsive(tablet-landscape) {
         padding-inline: 6rem;
         .nav {
-            padding-top: 30px;
-            &__links {
+            .hidden {
                 display: flex;
+            }
+            &__links {
+                background-color: transparent;
                 flex-direction: row;
+                position: static;
+                transform: none;
                 & > *:not(:first-child) {
                     margin-left: 60px;
                     margin-top: 0px;
                 }
             }
+            .hidden {
+                display: flex;
+            }
         }
+        
     }
     @include media-query.responsive(pc) {
         padding-inline: 265px;
         .nav {
-            padding-top: 30px;
+            padding-top: 57px;
         }
     }
 }

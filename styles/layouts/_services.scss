@@ -57,7 +57,7 @@
     @include media-query.responsive(phone) {
         &__heading {
             h2 {
-                padding-top: 30px;
+                padding-top: 100px;
             }
             p {
                 margin-block: 56px 100px; 
@@ -109,9 +109,6 @@
                 text-align: center;
                 margin-right: 0px;
                 column-gap: 10px;
-                h3 {       
-                    font-size: typography.$fs-headings - 1rem;                     
-                }
                 div {
                     width: 70px;
                     margin-bottom: 10px;
@@ -137,13 +134,9 @@
             padding: 0 60px 60px 60px;
             .item {
                 grid-template-columns: 100%;
-                margin-right: 0px;
                 column-gap: 10px;
-                h3 {       
-                    font-size: typography.$fs-headings - 1rem;                     
-                }
                 div {
-                    width: 70px;
+                    width: 80px;
                     margin-bottom: 10px;
                 }
                 p {
@@ -165,16 +158,13 @@
             padding: 0 60px 60px 60px;
             .item {
                 grid-template-columns: 1fr 4fr;
-                margin-right: 0px;
                 column-gap: 10px;
                 place-items: start;
                 text-align: start;
-                h3 {       
-                    font-size: typography.$fs-headings - 1rem;                     
-                }
+                align-items: center;
                 div {
                     width: 70px;
-                    margin-bottom: 10px;
+                    margin-bottom: 0px;
                 }
                 p {
                     line-height: 1.5rem;
@@ -196,16 +186,11 @@
             padding: 0 100px 60px 100px;
             .item {
                 grid-template-columns: 1fr 4fr;
-                margin-right: 0px;
                 column-gap: 10px;
                 place-items: start;
                 text-align: start;
-                h3 {       
-                    font-size: typography.$fs-headings - 1rem;                     
-                }
                 div {
                     width: 70px;
-                    margin-bottom: 10px;
                 }
                 p {
                     line-height: 1.5rem;
@@ -217,31 +202,36 @@
     }
     @include media-query.responsive(pc-big) {
         &__heading {
+            h2 {
+                padding-top: 108px;
+            }
             p {
-                margin-block: 56px 100px; 
+                margin-block: 56px 166px; 
             }
         }
         &__items{
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding: 0 100px 60px 100px;
+            padding: 0 256px 150px 256px;
+            row-gap: 93px;
+            column-gap: 80px;
             .item {
-                grid-template-columns: 1fr 4fr;
-                margin-right: 0px;
-                column-gap: 10px;
+                grid-template-columns: auto 4fr;
+                column-gap: 30px;
+                
                 place-items: start;
                 text-align: start;
-                h3 {       
-                    font-size: typography.$fs-headings - 1rem;                     
-                }
+                align-items: center;
                 div {
-                    width: 70px;
-                    margin-bottom: 10px;
+                    width: 94px;
+                    img {
+                        scale: 110%;
+                    }
+
                 }
                 p {
                     line-height: 1.5rem;
                     grid-column: 2;
-                    width: 40ch;
+                    width: auto;
                 }
             }
         }
