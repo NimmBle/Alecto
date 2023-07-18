@@ -16,10 +16,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &__logo {
+            cursor: pointer;
+        }
         &__links {
             justify-content: space-between;
             align-items: center;
-
+            cursor: pointer;
             & > *:not(:first-child) {
                 margin-left: 60px;
             }
@@ -74,7 +77,7 @@
         .nav { 
             padding-top: 30px;
             .hidden {
-                display: none;
+                display: none; 
             }
             &__links {
                 background-color: rgba(0, 0, 0, 0.274);
@@ -106,9 +109,12 @@
             &__links {
                 background-color: rgba(0, 0, 0, 0.274);
                 backdrop-filter: blur(4px);
+                z-index: 9999;
+                padding-block: 10px;
                 display: flex;
                 flex-direction: column;
                 position: absolute;
+                width: 90%;
                 left: 50%;
                 top: 90px;
                 transform: translateX(-50%);
@@ -129,6 +135,7 @@
                 background-color: transparent;
                 flex-direction: row;
                 position: static;
+                width: auto;
                 transform: none;
                 & > *:not(:first-child) {
                     margin-left: 60px;

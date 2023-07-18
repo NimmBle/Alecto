@@ -29,6 +29,7 @@
     @include media-query.responsive(phone) {
         padding: 0;
         &__div {
+            height: 520px;
             flex-direction: column-reverse;
             justify-content: center;
         }
@@ -40,6 +41,7 @@
         }
         &__leftSide {
             justify-content: space-around;
+            align-items: center;
             margin-top: 30px
         }
     }
@@ -50,7 +52,6 @@
             justify-content: center;
         }
         .links {
-            margin-top: 20px;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -59,5 +60,20 @@
             justify-content: space-around;
             margin-top: 30px
         }
+    }@include media-query.responsive(tablet-landscape) {
+        &__div {
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 77px;
+        }
+        .links {
+            flex-direction: row;
+        }
+        &__leftSide {
+            margin-top: 0px
+        }
+    }
+    @include media-query.responsive(pc-big) {
+        
     }
 }

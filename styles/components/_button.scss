@@ -4,11 +4,13 @@
     width: 183px;
     height: 47px;
     color: variables.$white;
+    font-family: typography.$ff-secondary;
     border-radius: 23px;
     cursor: pointer;
 }
 .button--green {
     background-color: variables.$accent;
+    font-family: typography.$ff-secondary;
     border: none;
     font-size: typography.$fs-small;
     font-weight: typography.$fw-bold;

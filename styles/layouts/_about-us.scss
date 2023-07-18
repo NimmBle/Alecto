@@ -104,39 +104,12 @@
         }
     }
     @include media-query.responsive(pc-small) {
-        padding-inline: 30px;
-        p {
-            text-wrap: balance;
-        }
         .elements {
-            gap: 60px 20px;
-            padding-inline: 0px;
             grid-template-columns: repeat(4, 1fr);
-            .element {
-                h3 {
-                        margin-top: 40px;
-                }
-            }
-        }
-        &__button {
-            margin-block: 50px;
         }
     }
     @include media-query.responsive(pc) {
         padding-inline: 200px;
-        p {
-            text-wrap: balance;
-        }
-        .elements {
-            gap: 60px 20px;
-            padding-inline: 0px;
-            grid-template-columns: repeat(4, 1fr);
-            .element {
-                h3 {
-                        margin-top: 40px;
-                }
-            }
-        }
         &__button {
             margin-block: 100px 50px;
         }

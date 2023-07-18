@@ -118,6 +118,7 @@ table {
 }
 .slider-wrapper .slide-arrow {
   position: absolute;
+  cursor: pointer;
   scale: 200%;
   z-index: 1000;
 }
@@ -266,9 +267,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+.header .nav__logo {
+  cursor: pointer;
+}
 .header .nav__links {
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .header .nav__links > *:not(:first-child) {
   margin-left: 60px;
@@ -355,9 +360,12 @@ h2 {
     background-color: rgba(0, 0, 0, 0.274);
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
+    z-index: 9999;
+    padding-block: 10px;
     display: flex;
     flex-direction: column;
     position: absolute;
+    width: 90%;
     left: 50%;
     top: 90px;
     transform: translateX(-50%);
@@ -378,6 +386,7 @@ h2 {
     background-color: transparent;
     flex-direction: row;
     position: static;
+    width: auto;
     transform: none;
   }
   .header .nav__links > *:not(:first-child) {
@@ -515,38 +524,13 @@ h2 {
   }
 }
 @media only screen and (min-width: 1199px) {
-  .about-us {
-    padding-inline: 30px;
-  }
-  .about-us p {
-    text-wrap: balance;
-  }
   .about-us .elements {
-    gap: 60px 20px;
-    padding-inline: 0px;
     grid-template-columns: repeat(4, 1fr);
-  }
-  .about-us .elements .element h3 {
-    margin-top: 40px;
-  }
-  .about-us__button {
-    margin-block: 50px;
   }
 }
 @media only screen and (min-width: 1599px) {
   .about-us {
     padding-inline: 200px;
-  }
-  .about-us p {
-    text-wrap: balance;
-  }
-  .about-us .elements {
-    gap: 60px 20px;
-    padding-inline: 0px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .about-us .elements .element h3 {
-    margin-top: 40px;
   }
   .about-us__button {
     margin-block: 100px 50px;
@@ -857,6 +841,7 @@ h2 {
   }
   .services__heading p {
     margin-block: 56px 100px;
+    line-height: 1.5rem;
   }
   .services__items {
     grid-template-columns: 100%;
@@ -886,7 +871,7 @@ h2 {
 }
 @media only screen and (min-width: 759px) {
   .services__heading h2 {
-    padding-top: 30px;
+    padding-top: 100px;
   }
   .services__heading p {
     margin-block: 56px 100px;
@@ -894,7 +879,7 @@ h2 {
   .services__items {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    padding: 0 40px 60px 40px;
+    padding: 0 40px 100px 40px;
   }
   .services__items .item {
     grid-template-columns: 100%;
@@ -1328,7 +1313,7 @@ h2 {
   .locations {
     text-align: center;
     grid-template-columns: 100%;
-    padding-inline: 20px;
+    padding-inline: 50px;
   }
   .locations .image img {
     display: none;
@@ -1424,6 +1409,7 @@ h2 {
     padding: 0;
   }
   .footer__div {
+    height: 520px;
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -1435,6 +1421,7 @@ h2 {
   }
   .footer__leftSide {
     justify-content: space-around;
+    align-items: center;
     margin-top: 30px;
   }
 }
@@ -1447,7 +1434,6 @@ h2 {
     justify-content: center;
   }
   .footer .links {
-    margin-top: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1457,17 +1443,31 @@ h2 {
     margin-top: 30px;
   }
 }
-
+@media only screen and (min-width: 1023px) {
+  .footer__div {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 77px;
+  }
+  .footer .links {
+    flex-direction: row;
+  }
+  .footer__leftSide {
+    margin-top: 0px;
+  }
+}
 .button {
   width: 183px;
   height: 47px;
   color: #fff;
+  font-family: "Figtree", sans-serif;
   border-radius: 23px;
   cursor: pointer;
 }
 
 .button--green {
   background-color: #17daa3;
+  font-family: "Figtree", sans-serif;
   border: none;
   font-size: 0.875rem;
   font-weight: 700;
